@@ -2,40 +2,41 @@
 
 div {
   font-family:"Cooper Black", "Cooper Black Standard", Georgia, serif;
-  font-weight:normal;
-  font-style:normal;
-  font-size: 1em;
 }
+
+#logo{
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 #container {  /* 940 width total */
   width: 900px;
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
-  min-height: 500px;
+  margin-top: 0;
+  min-height: 1000px;
   height: auto;
   background-color: #EEE;
   box-shadow: -5px 5px 30px #999;
   margin-bottom: -4em;
 }
 
+nav li{
+  font-family: Nobile, sans-serif;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-h3{
-  font-size: 20px
-}
-strong{
-  font-weight: bold;
-}
-p{
-  font-family: 'Nobile', sans-serif;
+nav a{
+  color: #ddd;
+  text-decoration: none;
   font-size: 12px;
 }
 
-a{
-  color: #fff;
-  text-decoration: none;
-}
 
 /* FORM POSITIONING
 */
@@ -71,22 +72,27 @@ label {
 
 #form_box{
   width: 500px;
-  margin: 40px auto 0px auto;
+  margin: 40px auto 0 auto;
 }
 
-.vidbox {
-  width: 448px;
+#vidbox {
+  width: 380px;
   float: left;
   margin: 10px auto 20px auto;
+  padding: 30px;
 
 }
-
-#biglogo {
-  width: 200px;
-  height: 135px;
-  margin: -30px auto 10px auto;
+.vidbox_header{
+  font-family:"Cooper Black", "Cooper Black Standard", Georgia, serif;
+  margin-top: 10px;
 }
 
+.vidbox_text{
+  font-family: 'Nobile', sans-serif;
+  font-size: 12px;
+  color: #111;
+  margin-bottom: 4px;
+}
 .right {
   width: 100px;
   margin: 0 auto 0 auto;
@@ -98,15 +104,17 @@ label {
   margin-left: auto;
 }
 
-h2  {
+/*STYLES FOR HOME.ERB*/
+
+#subtitle {
   font-size: 50px;
   text-align: center;
   color: #FFF;
   line-height: 48px;
   margin-top: 60px;
   text-shadow: 2px 2px 12px #333;
-
 }
+
 .navbox{
 padding: 10px;
 position: fixed;
@@ -115,9 +123,10 @@ left: 0;
 right: 0;
 z-index: 1000;
 width: 920px;
-height: 40px;
+height: 30px;
 margin-left: auto;
 margin-right: auto;
+margin-top: 40px;
 background-color: #333;
 box-shadow: -5px 5px 30px #999;
 }

@@ -1,16 +1,17 @@
 
 <% @rows.each do |row| %>
-  <div class='vidbox'>
-      <iframe width="360" height="200" src='<%= row['url'] %>' frameborder="0" allowfullscreen></iframe>
-      <h3><%= row['title'] %></h3>
+
+  <div id='vidbox'>
+      <iframe width="400" height="250" src='<%= row['url'] %>' frameborder="0" allowfullscreen></iframe>
+      <p class='vidbox_header'><%= row['title'] %></p>
       <br>
-      <p><strong>Description:</strong> <%= row['description'] %></p>
-      <p><strong>Genre:</strong> <%= row['genre'] %></p>
+      <p class='vidbox_text'><strong>Description:</strong> <%= row['description'] %></p>
+      <p class='vidbox_text'><strong>Genre:</strong> <%= row['genre'] %></p>
 
       <form action='/videos/<%= row['id'] %>/delete' method='post'>
         <button>Delete</button>
       </form>
 
-      <a href='/videos/<%= row['id'] %>/edit'>Edit</a>
+      <p class='vidbox_text'><a href='/videos/<%= row['id'] %>/edit'>Edit</a></p>
   </div>
 <% end %>
