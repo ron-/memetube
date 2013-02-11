@@ -1,0 +1,22 @@
+
+<div id="form_box">
+<form method='post' action='<%= @row.nil? ? "/create" : "/videos/#{@row['id']}" %>'>
+  <label for="title">What is the title?</label>
+  <input value='<%= @row['title'] if @row %>' type='text' name='title' class="textfield" />
+
+<br>
+  <label for="description">Add a description:</label>
+  <input value='<%= @row['description'] if @row %>' type='text' name='description' class="textfield" />
+
+<br>
+  <label for="url">Add the embed url:</label>
+  <input value='<%= @row['url'] if @row %>' type='text' name='url' class="textfield" />
+
+<br>
+  <label for="genre">Add the genre:</label>
+  <input value='<%= @row['genre'] if @row %>' type='text' name='genre' class="textfield" />
+
+  <button class ='right'><%= @row.nil? ? "New Video" : "Edit Video" %></button>
+
+</form>
+</div>

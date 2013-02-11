@@ -1,5 +1,8 @@
-CREATE TABLE table_name
+CREATE TABLE videos
 (
   id serial4 primary key,
-  column_name data_type
+  title varchar(50),
+  description text,
+  url varchar(100),
+  genre varchar(50)
 );

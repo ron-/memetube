@@ -2,20 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Insert Title Here</title>
+    <title>MemeTube</title>
     <link href="/css/css_reset.css" rel="stylesheet">
-    <script src='/js/jquery-1.9.1.js'></script>
-    <script src='/bootstrap/js/bootstrap.js'></script>
+    <script type="text/javascript">
+      WebFontConfig = { fontdeck: { id: '29441' } };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Nobile:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href="/css/style.css" rel="stylesheet">
   </head>
+
   <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-      </nav>
-    </header>
+    <div id='container'>
+      <div id='biglogo'>
+        <img id='biglogo' src='images/memetube_logo.png'>
+      </div>
 
-    <%= yield %>
 
+
+
+
+      <br>
+
+
+
+        <%= yield %>
+
+
+        <%= erb :nav %>
+
+
+    </div> <!-- end container -->
   </body>
 </html>

@@ -1,0 +1,22 @@
+<script language="JavaScript" type="text/javascript">
+function redirect(site){
+ window.location= site
+}
+</script>
+
+<div class='navbox'>
+<nav>
+  <ul class='menu'>
+    <li><a href="/"><strong>home</strong></a></li>
+    <li><a href="/videos"><strong>my videos</strong></a></li>
+    <li><a href="/new"><strong>add new video</strong></a></li>
+    <li><select name="URL" onchange="redirect(this.value)">
+        <option>Select a video category</option>
+        <option value="/videos">all videos</option>
+      <% @nav_rows.each do |row| %>
+        <option value="/videos/<%= row['genre'] %>"><%= row['genre'] %></option>
+      <% end %>
+    </select></li>
+  </ul>
+</nav>
+</div>
